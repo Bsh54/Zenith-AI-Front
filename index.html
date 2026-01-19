@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith AI | Intelligence Visuelle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="saas-header">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">ZENITH AI</span>
+            </div>
+            <nav class="header-nav">
+                <span class="status-badge" id="app-status">Système prêt</span>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <h1>Intelligence Visuelle Avancée</h1>
+                <p>Analysez, comprenez et extrayez l'essence de vos contenus vidéos en un clic.</p>
+            </section>
+
+            <div class="vertical-stack">
+                <!-- 01. Zone d'Import -->
+                <div class="card import-card">
+                    <div class="card-header">
+                        <span class="step-num">01</span>
+                        <h2>Source du média</h2>
+                    </div>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="upload">Fichier</button>
+                        <button class="tab-btn" data-tab="url">URL</button>
+                    </div>
+
+                    <div class="tab-content" id="upload-tab">
+                        <label class="drop-zone" id="drop-zone">
+                            <input type="file" id="file-input" hidden accept="video/*">
+                            <div class="drop-zone-content">
+                                <span class="icon">📁</span>
+                                <p>Déposez votre vidéo ou cliquez ici</p>
+                                <span class="hint">MP4, MOV, AVI (max 500MB)</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="tab-content hidden" id="url-tab">
+                        <div class="input-group">
+                            <input type="text" id="url-input" placeholder="Liens TikToks uniquement pour le moment ...">
+                            <button class="btn btn-primary" id="url-submit">Importer</button>
+                        </div>
+                    </div>
+
+                    <div id="import-status-container" class="status-container hidden">
+                        <div class="spinner-mini"></div>
+                        <div class="status-info" style="flex: 1;">
+                            <span id="import-status-text">Préparation...</span>
+                            <div class="progress-bar-container" style="margin-top: 8px; margin-bottom: 0; height: 4px;">
+                                <div id="upload-progress-bar" class="progress-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aperçu Vidéo -->
+                    <div id="video-preview-container" class="video-preview hidden">
+                        <video id="preview-player" controls></video>
+                    </div>
+                </div>
+
+                <!-- 02. Prompt Personnalisé -->
+                <div class="card prompt-card disabled" id="prompt-card">
+                    <div class="card-header">
+                        <span class="step-num">02</span>
+                        <h2>Votre Prompt</h2>
+                    </div>
+                    <div class="prompt-area">
+                        <textarea id="custom-prompt" placeholder="Tapez votre instruction ici...">Résumer et continuer l'analyse du média</textarea>
+                        <button class="btn btn-large btn-accent" id="send-prompt-btn" disabled>
+                            GÉNÉRER L'ANALYSE
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 03. Résultat -->
+                <section class="result-section hidden" id="result-panel">
+                    <div class="card report-card">
+                        <div class="card-header flex-header">
+                            <div class="title-with-step">
+                                <span class="step-num">03</span>
+                                <h2>Analyse Zenith AI</h2>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary btn-sm" id="copy-report">
+                                    Copier
+                                </button>
+                                <button class="btn btn-secondary btn-sm" id="download-report">
+                                    Télécharger
+                                </button>
+                                <button class="btn btn-primary btn-sm" id="reset-app">
+                                    Nouvelle Analyse
+                                </button>
+                            </div>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="streaming-progress" class="progress-bar"></div>
+                        </div>
+                        <div class="report-content markdown-body" id="report-output">
+                            <!-- Le rapport s'affichera ici -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="saas-footer">
+            <p>Conçu avec ✨ par <a href="https://www.linkedin.com/in/shadrak-bessanh" target="_blank" rel="noopener noreferrer">Shadrak BESSANH</a></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
