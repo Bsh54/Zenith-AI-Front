@@ -92,13 +92,14 @@
     </script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <div class="min-h-screen text-slate-200">
         <!-- Header -->
         <header class="fixed top-0 left-0 right-0 z-[1000] h-20 glass">
             <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
                 <div class="flex items-center gap-3">
-                    <span class="text-3xl text-accent"><i class='bx bxs-magic-wand filter drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]'></i></span>
+                    <span class="text-3xl text-accent"><i
+                            class='bx bxs-magic-wand filter drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]'></i></span>
                     <span class="text-2xl font-montserrat tracking-tighter text-gradient">ZENITH AI</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
@@ -119,26 +120,27 @@
             <!-- Hero Section -->
             <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden" id="hero">
                 <div class="hero-glow"></div>
-                <div class="relative z-10 text-center px-6 animate-fadeIn">
+                <div class="relative z-10 text-center px-6 animate-fadeIn w-full">
                     <span
-                        class="inline-flex items-center px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-400 mb-8 backdrop-blur-sm">
+                        class="inline-flex items-center px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-[10px] md:text-xs font-medium text-slate-400 mb-8 backdrop-blur-sm">
                         Intelligence Multimodale Haute Performance
                     </span>
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl mb-6 leading-none font-montserrat tracking-tighter">
+                    <h1
+                        class="text-4xl md:text-7xl lg:text-8xl mb-6 leading-tight md:leading-none font-montserrat tracking-tighter">
                         Comprenez vos vidéos <br><span class="text-gradient">Comme un Humain</span>
                     </h1>
                     <p
-                        class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light font-roboto">
+                        class="text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light font-roboto">
                         Zenith AI transforme n'importe quelle vidéo ou URL en un rapport narratif structuré et
                         professionnel en combinant Vision, Audio et Langage.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="app.html"
-                            class="px-8 py-4 bg-white text-black rounded-2xl font-black text-lg hover:bg-slate-200 transition-all hover:-translate-y-1 shadow-[0_20px_50px_-12px_rgba(255,255,255,0.2)] flex items-center gap-2">
+                            class="px-6 py-4 md:px-8 md:py-4 bg-white text-black rounded-2xl font-black text-base md:text-lg hover:bg-slate-200 transition-all hover:-translate-y-1 shadow-[0_20px_50px_-12px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2">
                             Démarrer l'Outil <i class='bx bx-right-arrow-alt text-2xl'></i>
                         </a>
                         <a href="#features"
-                            class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-md">
+                            class="px-6 py-4 md:px-8 md:py-4 bg-white/5 border border-white/10 rounded-2xl font-bold text-base md:text-lg hover:bg-white/10 transition-all backdrop-blur-md flex items-center justify-center">
                             Découvrir les fonctionnalités
                         </a>
                     </div>
@@ -158,51 +160,51 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div
-                        class="glass p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn">
-                        <div class="text-5xl mb-6 text-accent"><i class='bx bx-import'></i></div>
-                        <h3 class="text-xl mb-3 font-montserrat">Entrée Universelle</h3>
+                        class="glass p-6 md:p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn">
+                        <div class="text-4xl md:text-5xl mb-6 text-accent"><i class='bx bx-import'></i></div>
+                        <h3 class="text-lg md:text-xl mb-3 font-montserrat">Entrée Universelle</h3>
                         <p class="text-sm text-slate-400 leading-relaxed font-light font-roboto">Importez vos fichiers
                             locaux ou analysez directement via URL (YouTube, TikTok, Twitter, etc.).</p>
                     </div>
 
-                    <div class="glass p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
+                    <div class="glass p-6 md:p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
                         style="animation-delay: 0.1s;">
-                        <div class="text-5xl mb-6 text-accent"><i class='bx bx-show'></i></div>
-                        <h3 class="text-xl mb-3 font-montserrat">Vision Intelligence</h3>
+                        <div class="text-4xl md:text-5xl mb-6 text-accent"><i class='bx bx-show'></i></div>
+                        <h3 class="text-lg md:text-xl mb-3 font-montserrat">Vision Intelligence</h3>
                         <p class="text-sm text-slate-400 leading-relaxed font-light font-roboto">Détection d'objets et
                             analyse de scènes en temps réel propulsée par <strong
                                 class="text-white font-bold">YOLOv8</strong>.</p>
                     </div>
 
-                    <div class="glass p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
+                    <div class="glass p-6 md:p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
                         style="animation-delay: 0.2s;">
-                        <div class="text-5xl mb-6 text-accent"><i class='bx bx-microphone'></i></div>
-                        <h3 class="text-xl mb-3 font-montserrat">Transcription Audio</h3>
+                        <div class="text-4xl md:text-5xl mb-6 text-accent"><i class='bx bx-microphone'></i></div>
+                        <h3 class="text-lg md:text-xl mb-3 font-montserrat">Transcription Audio</h3>
                         <p class="text-sm text-slate-400 leading-relaxed font-light font-roboto">Conversion
                             haute-fidélité parole-texte avec détection automatique de la langue via <strong
                                 class="text-white font-bold">Whisper</strong>.</p>
                     </div>
 
-                    <div class="glass p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
+                    <div class="glass p-6 md:p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
                         style="animation-delay: 0.3s;">
-                        <div class="text-5xl mb-6 text-accent"><i class='bx bx-brain'></i></div>
-                        <h3 class="text-xl mb-3 font-montserrat">Synthèse Narrative</h3>
+                        <div class="text-4xl md:text-5xl mb-6 text-accent"><i class='bx bx-brain'></i></div>
+                        <h3 class="text-lg md:text-xl mb-3 font-montserrat">Synthèse Narrative</h3>
                         <p class="text-sm text-slate-400 leading-relaxed font-light font-roboto">Génération de rapports
                             d'analyse profonds et contextuels grâce aux derniers modèles LLM.</p>
                     </div>
 
-                    <div class="glass p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
+                    <div class="glass p-6 md:p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
                         style="animation-delay: 0.4s;">
-                        <div class="text-5xl mb-6 text-accent"><i class='bx bx-diamond'></i></div>
-                        <h3 class="text-xl mb-3 font-montserrat">Interface Premium</h3>
+                        <div class="text-4xl md:text-5xl mb-6 text-accent"><i class='bx bx-diamond'></i></div>
+                        <h3 class="text-lg md:text-xl mb-3 font-montserrat">Interface Premium</h3>
                         <p class="text-sm text-slate-400 leading-relaxed font-light font-roboto">Un tableau de bord
                             élégant en mode sombre conçu pour une expérience utilisateur fluide.</p>
                     </div>
 
-                    <div class="glass p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
+                    <div class="glass p-6 md:p-10 rounded-[32px] hover:border-accent group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] animate-fadeIn"
                         style="animation-delay: 0.5s;">
-                        <div class="text-5xl mb-6 text-accent"><i class='bx bx-bolt-circle'></i></div>
-                        <h3 class="text-xl mb-3 font-montserrat">Vitesse Extrême</h3>
+                        <div class="text-4xl md:text-5xl mb-6 text-accent"><i class='bx bx-bolt-circle'></i></div>
+                        <h3 class="text-lg md:text-xl mb-3 font-montserrat">Vitesse Extrême</h3>
                         <p class="text-sm text-slate-400 leading-relaxed font-light font-roboto">Extraction de frames
                             haute vitesse avec Decord pour des résultats quasi-instantanés.</p>
                     </div>
@@ -252,7 +254,7 @@
                 <p class="text-slate-500 max-w-md mx-auto mb-8 text-sm font-light">High-Performance Multimodal Video
                     Analysis & Narrative Synthesis.</p>
                 <p class="text-slate-600 text-[10px] uppercase tracking-widest">Built with ❤️ By <a
-                        href="https://www.linkedin.com/in/bessanh-shadrak-744049287/" target="_blank"
+                        href="https://www.linkedin.com/in/bessanh-shadrak-744049287/" target="_blank" rel="noopener"
                         class="text-accent font-bold">Shadrak BESSANH</a></p>
             </div>
         </footer>

@@ -174,7 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    safeAddEventListener(urlSubmit, 'click', async () => {
+    // URL Import handling with form-like behavior for mobile
+    const handleUrlSubmit = async () => {
         const url = urlInput.value.trim();
         if (!url) return;
 
@@ -184,15 +185,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const resp = await fetch(`${API_BASE_URL}/analyze/url`, { method: 'POST', body: formData });
+            if (!resp.ok) throw new Error('Network response was not ok');
             const data = await resp.json();
             onImportSuccess(data);
         } catch (err) {
+            console.error(err);
             showStatus(importStatus, importStatusText, "Lien invalide ou erreur", true);
         }
-    });
+    };
+
+    safeAddEventListener(urlSubmit, 'click', handleUrlSubmit);
 
     safeAddEventListener(urlInput, 'keydown', (e) => {
-        if (e.key === 'Enter') urlSubmit.click();
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            handleUrlSubmit();
+        }
     });
 
     function onImportSuccess(data) {
@@ -271,11 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 progress = Math.min(progress + 0.5, 95);
                 if (streamingProgress) streamingProgress.style.width = `${progress}%`;
 
-                // Auto-scroll intelligent
-                const threshold = 150;
-                const isNearBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - threshold);
+                // Auto-scroll intelligent - plus souple sur mobile
+                const threshold = 100;
+                const isNearBottom = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - threshold);
                 if (isNearBottom) {
-                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'auto' });
                 }
             } else if (data.message) {
                 const typingElem = reportOutput ? reportOutput.querySelector('.typing') : null;
